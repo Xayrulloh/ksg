@@ -7,7 +7,7 @@
     "build": "tsc",
     "start": "node --import tsx/esm --env-file .env src/main.ts",
     "dev": "tsx watch --env-file .env src/main.ts",
-    "quality": "biome check --apply src"
+    "quality": "prettier . --write"
   },
   "dependencies": {
     "@sinclair/typebox": "^0.32.35",
@@ -24,8 +24,8 @@
     "@fastify/type-provider-typebox": "^4.0.0",
     "@types/node": "^20.0.0",
     "@types/pg": "^8.11.6",
-    "biome": "^0.3.3",
     "pino-pretty": "^11.2.2",
+    "prettier": "^3.3.3",
     "typescript": "^5.5.3"
   },
   "keywords": [

@@ -1,13 +1,15 @@
-import type { FastifyPluginAsync } from "fastify";
-import { getItem } from "./item.handler.ts";
-import { ItemGetSchema } from "./item.schema.ts";
+import type { FastifyPluginAsync } from 'fastify'
+import { getItem } from './item.handler.ts'
+import { ItemGetSchema } from './item.schema.ts'
 
 const itemRoutes: FastifyPluginAsync = async (fastify, options) => {
-
-    fastify.get('/', {
+  fastify.get(
+    '/',
+    {
       schema: ItemGetSchema,
-    }, getItem);
+    },
+    getItem,
+  )
+}
 
-};
-
-export default itemRoutes;
+export default itemRoutes

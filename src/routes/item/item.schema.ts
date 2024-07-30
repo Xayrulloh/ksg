@@ -1,4 +1,4 @@
-import { Type } from "@sinclair/typebox";
+import { Type } from '@sinclair/typebox'
 
 export const ItemGetResponse = Type.Object({
   market_hash_name: Type.String(),
@@ -15,7 +15,7 @@ export const ItemGetResponse = Type.Object({
   updated_at: Type.String(),
   min_tradable_price: Type.Union([Type.Null(), Type.Number()]),
   min_non_tradable_price: Type.Union([Type.Null(), Type.Number()]),
-});
+})
 
 export const ItemGetSchema = {
   response: {
@@ -24,7 +24,7 @@ export const ItemGetSchema = {
       items: ItemGetResponse,
     },
   },
-  tags: ["item"],
+  tags: ['item'],
 }
 
-export type ItemGetResponseType = typeof ItemGetResponse;
+export type ItemGetResponseType = typeof ItemGetResponse
